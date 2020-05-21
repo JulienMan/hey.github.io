@@ -1,0 +1,160 @@
+body{
+    margin: 0px;
+}
+
+.container-wrapper{
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.title-wrapper{
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.title{
+    font-size: 30px;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.ttt-up{
+    display: flex;
+}
+
+.ttt-up-left{
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+}
+
+.ttt-up-middle{
+    border-left: 1px solid black;
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+}
+
+.ttt-up-right{
+    border-left: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+.ttt-middle{
+    display: flex;
+}
+
+.ttt-middle-left{
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+}
+
+.ttt-middle-middle{
+    border-left: 1px solid black;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+}
+
+.ttt-middle-right{
+    border-left: 1px solid black;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+.ttt-down{
+    display: flex;
+}
+
+.ttt-symbol{
+    text-align: center;
+    font-weight: 400;
+    font-size: 21px;
+}
+
+.ttt-down-left{
+    border-top: 1px solid black;
+    border-right: 1px solid black;
+}
+
+.ttt-down-middle{
+    border-left: 1px solid black;
+    border-top: 1px solid black;
+    border-right: 1px solid rgb(0, 0, 0);
+}
+
+.ttt-down-right{
+    border-left: 1px solid black;
+    border-top: 1px solid black;
+}
+
+.hint-wrapper{
+    padding: 45px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.tic-tac-toe-wrapper{
+    opacity: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 15px;
+    padding-bottom: 25px;
+}
+
+.tic-tac-toe-wrapper > div > div{
+    height: 30px;
+    width: 30px;
+}
+
+.example-wrapper{
+    padding-top: 45px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.example-wrapper-center{
+    display: flex;
+    justify-content: space-evenly;
+    width: 400px;
+    padding-right: 25px;
+}
+
+.background-example-wrapper-arrow{
+    height: 100px;
+    width: 100px;
+    margin-top: 10px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.background-example-wrapper-equal{
+    font-size: 50px;
+    font-family: 'Roboto Mono', monospace;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 120px;
+}
+
+.form-wrapper{
+    display: flex;
+    justify-content: space-evenly;
+    padding-bottom: 18px;
+}
+
+.label{
+    font-family: 'Roboto Mono', monospace;
+    font-weight: bolder;
+}
+
+.instructions-wrapper{
+    font-family: 'Roboto Mono', monospace;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 15px;
+}
+
+.instructions-text{
+    text-align: center;
+}

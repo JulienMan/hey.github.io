@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="uft-8" />
+    <title>Escape Room</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles2.css">
+</head>
+<body>
+    <div class="container-wrapper" style="background-image:url(images/background.jpg);">
+        <div class="title-wrapper">
+            <div class="title">Problème 2</div>
+        </div>
+
+        <div class="puzzle-wrapper">
+            <div class="image-wrapper">
+                <div class="door door-blue" style="background-color: blue;"></div>
+                <div class="door door-red" style="background-color: red;"></div>
+                <div class="door door-yellow" style="background-color: yellow;"></div>
+                <div class="door door-purple" style="background-color: purple;"></div>
+                <div class="door door-orange" style="background-color: orange;"></div>
+                <div class="door door-green" style="background-color: lime;"></div>
+                <div class="door door-dark-green" style="background-color: green;"></div>
+                <div class="door door-turquoise" style="background-color: turquoise;"></div>
+                <div class="door door-pink" style="background-color: violet;"></div>
+                <div class="door door-white" style="background-color: white;"></div>
+                <div class="image" style="background-image: url(images/grid.png);"></div>
+            </div>
+            <div class="information-wrapper">
+                <div class="information-line-wrapper">
+                    <div class="box colored-box-blue">◼</div>
+                    <div class="info">= a</div>
+                </div>
+                <div class="information-line-wrapper">
+                    <div class="box colored-box-red">◼</div>
+                    <div class="info">= b</div>
+                </div>
+                <div class="information-line-wrapper">
+                    <div class="box colored-box-yellow">◼</div>
+                    <div class="info">= c</div>
+                </div>
+                <div class="information-line-wrapper">
+                    <div class="box colored-box-purple">◼</div>
+                    <div class="info">= d</div>
+                </div>
+                <div class="information-line-wrapper">
+                    <div class="box colored-box-orange">◼</div>
+                    <div class="info">= e</div>
+                </div>
+                <div class="information-line-wrapper">
+                    <div class="box colored-box-green">◼</div>
+                    <div class="info">= f</div>
+                </div>
+                <div class="information-line-wrapper">
+                    <div class="box colored-box-dark-green">◼</div>
+                    <div class="info">= g</div>
+                </div>
+                <div class="information-line-wrapper">
+                    <div class="box colored-box-turquoise">◼</div>
+                    <div class="info">= h</div>
+                </div>
+                <div class="information-line-wrapper">
+                    <div class="box colored-box-pink">◼</div>
+                    <div class="info">= i</div>
+                </div>
+                <div class="information-line-wrapper">
+                    <div class="box colored-box-white">◼</div>
+                    <div class="info">= j</div>
+                </div>
+            </div>
+        </div>
+        <div class="riddle-wrapper">Complétez le chemin vers chez moi, la clef est dans mon adresse</div>
+        <div class="form-wrapper">
+            <form class="form" autocomplete="off">
+                <label class="label">Réponse </label>
+                <input type="text" name="name" >
+                <input type="submit" value="Soumettre">
+            </form>
+        </div>
+    </div>
+</body>
+<script>
+    const form = document.querySelectorAll('.form');
+    const submitInput = form[0].querySelector('input[type="submit"]');
+
+    function GetDataForm(e){
+        e.preventDefault();
+        var formData = new FormData(form[0]);
+        var code = formData.get("name");
+        if (code.toLowerCase() == "cdbhj")
+        {
+            window.open("problem3.html", "_blank");
+        }
+        else{
+            alert("Mauvaise réponse");
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        submitInput.addEventListener('click', GetDataForm, false);
+    }, false);
+
+</script>
+</html>

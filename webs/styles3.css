@@ -1,0 +1,204 @@
+body{
+    margin: 0px;
+}
+
+.container-wrapper{
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.title-wrapper{
+    padding-top: 20px;
+    padding-bottom: 40px;
+    display: flex;
+    justify-content: space-evenly;
+}
+.title{
+    font-size: 30px;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.maze-wrapper{
+    padding-left: 50px;
+    display: flex;
+}
+
+.maze-complete{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    height: 450px;
+    width: 450px;
+    border: 10px solid black;
+}
+
+.maze-bloc{
+    height: 150px;
+    width: 100%;
+    background-size: 1000px;
+    border: 1px blue solid;
+    transition: 1s;
+}
+
+.maze-entry{
+    position: absolute;
+    left: 280.5px;
+    top: 99px;
+    height: 10px;
+    width: 10px;
+}
+
+.maze-entry-arrow{
+    position: absolute;
+    left: 281.5px;
+    top: 79px;
+    height: 10px;
+    width: 10px;
+    color: red
+}
+
+.maze-exit{
+    position: absolute;
+    left: 510.5px;
+    top: 311px;
+    height: 10px;
+    width: 10px;
+}
+
+.maze-exit-arrow{
+    position: absolute;
+    left: 522px;
+    top: 306px;
+    height: 10px;
+    width: 10px;
+    color: red;
+}
+
+.number-wrapper{
+    border: 5px solid black;
+    height: 50px;
+    width: 50px;
+    margin-left: 280px;
+    margin-top: 200px;
+    font-size: 30px;
+    font-family: 'Roboto Mono', monospace;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 50px;
+}
+
+.form-wrapper{
+    padding-top: 52px;
+    display: flex;
+    justify-content: space-evenly;
+    padding-bottom: 52px;
+}
+
+.label{
+    font-family: 'Roboto Mono', monospace;
+    font-weight: bolder;
+}
+
+.number{
+    position: relative;
+    font-size: 10px;
+    width: 10px;
+}
+
+.frame0-1{
+    left: 102px;
+    top: 118px;
+}
+
+.frame0-2{
+    left: 22px;
+    top: 88px;
+}
+
+.frame1-1{
+    left: 112px;
+    top: 128px;
+}
+
+.frame1-2{
+    left: 43px;
+    top: 7px;
+}
+
+.frame3-1{
+    left: 23px;
+    top: 78px;
+}
+
+.frame3-2{
+    left:121px;
+    top: 37px;
+}
+
+.frame4-1{
+    left: 33px;
+    top: 118px;
+}
+
+.frame4-2{
+    left: 72px;
+    top: 97px;
+}
+
+.frame5-1{
+    left: 71px;
+    top: 48px;
+}
+
+.frame5-2{
+    left: 103px;
+    top: 116px;
+}
+
+.frame6-1{
+    left: 142px;
+    top: -2px;
+}
+
+.frame6-2{
+    left: 33px;
+    top: 7px;
+}
+
+.frame7-1{
+    left: 101px;
+    top: 118px;
+}
+
+.frame7-2{
+    left: 73px;
+    top: 27px;
+}
+
+.frame8-1{
+    left: 132px;
+    top: 118px;
+}
+
+.frame8-2{
+    left: 83px;
+    top: -2px;
+}
+
+.interactive-wrapper{
+    display: flex;
+    position: absolute;
+    top: 180px;
+    left: 550px;
+}
+
+.interactive{
+    font-family: 'Roboto Mono', monospace;
+    font-weight: bolder;
+    padding-left: 4px;
+}
+
+.arrow{
+    font-weight: 1000;
+    padding-top: 1px;
+}

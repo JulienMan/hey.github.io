@@ -1,0 +1,13 @@
+.container{
+    height: 500px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.texte{
+    padding-top: 40px;
+    font-family: 'Roboto Mono', monospace;
+    text-align: center;
+}

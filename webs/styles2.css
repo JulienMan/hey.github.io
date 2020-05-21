@@ -1,0 +1,175 @@
+body{
+    margin: 0px;
+}
+
+.container-wrapper{
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.title-wrapper{
+    padding-top: 20px;
+    padding-bottom: 40px;
+    display: flex;
+    justify-content: space-evenly;
+}
+.title{
+    font-size: 30px;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.puzzle-wrapper{
+    display: flex;
+    justify-content: space-evenly;
+    margin-right: 50px;
+}
+
+.image-wrapper{
+    height: 300px;
+    width: 100px;
+}
+
+.door{
+    height: 25px;
+    width: 15px;
+    position: absolute;
+}
+
+.door-blue{
+    top: 182.5px;
+    left: 197px;
+}
+
+.door-red{
+    top: 297.5px;
+    left: 180px;  
+}
+
+.door-yellow{
+    top: 306px;
+    left: 463px;
+}
+
+.door-purple{
+    top: 114px;
+    left: 338px;  
+}
+
+.door-orange{
+    top: 287px;
+    left: 340px;
+}
+
+.door-green{
+    top: 422.5px;
+    left: 487px; 
+}
+
+.door-dark-green{
+    top: 158px;
+    left: 530px; 
+}
+
+.door-turquoise{
+    top: 217px;
+    left: 406px; 
+}
+
+.door-pink{
+    top: 388.5px;
+    left: 262px; 
+}
+
+.door-white{
+    top: 287px;
+    left: 592px;  
+}
+
+.image{
+    position: absolute;
+    top: 50px;
+    left: 80px;
+    height: 400px;
+    width: 800px;
+    background-size: 600px;
+    background-repeat: no-repeat;
+}
+
+.information-wrapper{
+    padding-top: 32px;
+}
+
+.information-line-wrapper{
+    display: flex;
+}
+
+.box{
+    font-size: 20px;
+}
+
+.colored-box-blue{
+    color: blue;
+}
+
+.colored-box-red{
+    color: red;
+}
+
+.colored-box-yellow{
+    color: yellow;
+}
+
+.colored-box-orange{
+    color: orange;
+}
+
+.colored-box-purple{
+    color: purple;
+}
+
+.colored-box-green{
+    color: lime;
+}
+
+.colored-box-dark-green{
+    color: green;
+}
+
+.colored-box-pink{
+    color: violet;
+}
+
+.colored-box-turquoise{
+    color: turquoise;
+}
+
+.colored-box-white{
+    color: white;
+}
+
+.info{
+    padding-left: 7px;
+    padding-top: 3px;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: bolder;
+}
+
+.riddle-wrapper{
+    padding-top: 70px;
+    padding-bottom: 40px;
+    text-align: center;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: bolder;
+}
+
+.form-wrapper{
+    display: flex;
+    justify-content: space-evenly;
+    padding-bottom: 26px;
+}
+
+.label{
+    font-family: 'Roboto Mono', monospace;
+    font-weight: bolder;
+}

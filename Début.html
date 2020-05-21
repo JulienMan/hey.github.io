@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles0.css">
+</head>
+<body>
+    <div class="title">
+        <h1>Bienvenue à mon Défi-Évasion.</h1>
+        <h2>Vous aurez trois défis à compléter pour échaper cette salle, alors pesez sur ce bouton pour commencer:</h2>
+    </div>
+</body>
+<div class="form-wrapper">
+    <form class="form" autocomplete="off">
+        <input style="font-size: 17px; font-weight:400; height: 45px; width: 120px; font-family: 'Roboto Mono', monospace;"  type="submit" value="Commencer">
+    </form>
+</div>
+
+
+</html>
+<script>
+    const form = document.querySelectorAll('.form');
+    const submitInput = form[0].querySelector('input[type="submit"]');
+
+    function GetDataForm(e){
+        e.preventDefault();
+        window.open("webs/problem1.html");
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        submitInput.addEventListener('click', GetDataForm, false);
+    }, false);
+
+</script>

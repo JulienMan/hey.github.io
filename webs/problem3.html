@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="uft-8" />
+    <title>Escape Room</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles3.css">
+</head>
+<body>
+    <div class="container-wrapper" style="background-image:url(images/background.jpg);">
+        <div class="title-wrapper">
+            <div class="title">Problème 3</div>
+        </div>
+
+        <div class="maze-wrapper">
+            <div class="maze-complete">
+                <div class="maze-bloc" style="background-image:url(images/pixil-frame-1.png);" id = "0">
+                    <div class="number frame0-1">a</div>
+                    <div class="number frame0-2">n</div>
+                </div>
+                <div class="maze-bloc" style="background-image:url(images/pixil-frame-2.png);" id = "1">
+                    <div class="number frame1-1">u</div>
+                    <div class="number frame1-2">c</div>
+                </div>
+                <div class="maze-bloc" style="background-color: black;" id = 2></div>
+                <div class="maze-bloc" style="background-image:url(images/pixil-frame-3.png);" id = "3">
+                    <div class="number frame3-1">i</div>
+                    <div class="number frame3-2">w</div>
+                </div>
+                <div class="maze-bloc" style="background-image:url(images/pixil-frame-4.png);" id = "4">
+                    <div class="number frame4-1">o</div>
+                    <div class="number frame4-2">v</div>
+                </div>
+                <div class="maze-bloc" style="background-image:url(images/pixil-frame-5.png);" id = "5">
+                    <div class="number frame5-1">w</div>
+                    <div class="number frame5-2">e</div>
+                </div>
+                <div class="maze-bloc" style="background-image:url(images/pixil-frame-6.png);" id = "6">
+                    <div class="number frame6-1">s</div>
+                    <div class="number frame6-2">x</div>
+                </div>
+                <div class="maze-bloc" style="background-image:url(images/pixil-frame-7.png);" id = "7">
+                    <div class="number frame7-1">m</div>
+                    <div class="number frame7-2">z</div>
+                </div>
+                <div class="maze-bloc" style="background-image:url(images/pixil-frame-8.png);" id = "8">
+                    <div class="number frame8-1">u</div>
+                    <div class="number frame8-2">r</div>
+                </div>
+                <div class="interactive-wrapper">
+                    <div class="arrow">← </div>
+                    <div class="interactive"> interactif</div>
+                </div>
+            </div>
+            <div class="maze-entry" style="background-color: white;"></div>
+            <div class="maze-entry-arrow">↓</div>
+            <div class="maze-exit" style="background-color: white;"></div>
+            <div class="maze-exit-arrow">→</div>
+
+            <div class="number-wrapper"></div>
+        </div>
+
+        <div class="form-wrapper">
+            <form class="form"  autocomplete="off">
+                <label class="label">Réponse   </label>
+                <input type="text" name="name">
+                <input type="submit" value="Soumettre">
+            </form>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    maze_blocs = document.querySelectorAll(".maze-bloc");
+    number = document.querySelector(".number-wrapper");
+    maze_position = [[1,1], [2,3], [2,2], [1,3], [3,1], [3,2], [2,1], [3,3], [1,2]];
+    // maze_position = [[1,1], [1,2], [1,3], [2,1], [2,2], [2,3], [3,1], [3,2], [3,3]];
+    for (j = 0; j < 9; j++){
+        maze_blocs[j].style.gridRow = maze_position[j][0];
+        maze_blocs[j].style.gridColumn = maze_position[j][1];
+    }
+    for (let i = 0; i < 9; i++){
+        if (i != 2){
+            maze_blocs[i].addEventListener('click', () => {
+                const block_x = maze_position[i][1];
+                const block_y = maze_position[i][0];
+                const empty_x = maze_position[2][1];
+                const empty_y = maze_position[2][0];
+
+                changes = true;
+                if (block_x == empty_x){
+                    
+                    if(block_y - empty_y == -2 || block_y - empty_y == 2){
+                        index = maze_position.findIndex(position => (position[0] == (empty_y + block_y)/2 && position[1] == block_x));
+                        maze_position[i] = maze_position[index];
+                        maze_position[index] = [empty_y, empty_x];
+                        maze_position[2] = [block_y, block_x];
+                    }
+                    else{
+                        maze_position[i] = [empty_y, empty_x];
+                        maze_position[2] = [block_y, block_x];
+                    }
+                }
+                else if(block_y == empty_y){
+                    if(block_x - empty_x == -2 || block_x - empty_x == 2){
+                        index = maze_position.findIndex(position => (position[0] == block_y && position[1] == (empty_x + block_x)/2));
+                        maze_position[i] = maze_position[index];
+                        maze_position[index] = [empty_y, empty_x];
+                        maze_position[2] = [block_y, block_x];
+                    }
+                    else{
+                        maze_position[i] = [empty_y, empty_x];
+                        maze_position[2] = [block_y, block_x];
+                    }
+                }
+                else{
+                    changes = false;
+                }
+
+                if (changes){
+                    for (j = 0; j < 9; j++){
+                        maze_blocs[j].style.gridRow = maze_position[j][0];
+                        maze_blocs[j].style.gridColumn = maze_position[j][1];
+                    }
+                }
+
+            })
+
+            maze_blocs[i].addEventListener("mouseover", () => {
+                number.innerHTML = i;
+            })
+
+            maze_blocs[i].addEventListener("mouseout", () => {
+                number.innerHTML = "";
+            })
+        }
+    }
+
+    const form = document.querySelectorAll('.form');
+    const submitInput = form[0].querySelector('input[type="submit"]');
+
+    function GetDataForm(e){
+        e.preventDefault();
+        var formData = new FormData(form[0]);
+        var code = formData.get("name");
+        if (code.toLowerCase() == "avwxme")
+        {
+            window.open("conclusion.html", "_blank");
+        }
+        else{
+            alert("Mauvaise réponse");
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        submitInput.addEventListener('click', GetDataForm, false);
+    }, false);
+</script>
